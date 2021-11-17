@@ -1,9 +1,9 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "node application",
-  "author": "Decagon <info@decagon.dev>",
-  "private": true,
+  "description": "ecom",
+  "author": "chie7tain",
+  "private": false,
   "scripts": {
     "serve": "node lib/index",
     "dev": "ts-node-dev --respawn server/index.ts",
