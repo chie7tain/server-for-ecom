@@ -52,15 +52,6 @@ const server: Server = http.createServer(
   }
 );
 
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-// const server :Server = http.createServer((req: IncomingMessage, res: ServerResponse) => {
-//     if (req.method === "GET") {
-//       res.end(JSON.stringify({ name: "hello" }));
-//     }
-//   }
-// );
-
-// server.listen(3005);
