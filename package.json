@@ -5,10 +5,9 @@
   "author": "chie7tain",
   "private": false,
   "scripts": {
-    "serve": "node lib/index",
-    "dev": "ts-node-dev --respawn server/index.ts",
-    "build": "tsc",
-    "watch": "tsc -p . --watch"
+    "serve": "node lib/app",
+    "dev": "ts-node server/index.ts",
+    "compile":"yarn tsc"
   },
   "dependencies": {
     "ts-node": "^9.1.1",
