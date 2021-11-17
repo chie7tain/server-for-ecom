@@ -32,8 +32,7 @@ const server: Server = http.createServer(
       req.method === "PUT"
     ) {
       const id = req.url.split("/")[3];
-      console.log("we are here");
-      console.log(id);
+
       updateProduct(req, res, id);
     } else if (
       req.url?.match(/\/api\/products\/\d+/) &&
