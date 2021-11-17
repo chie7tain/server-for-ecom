@@ -52,6 +52,6 @@ const server: Server = http.createServer(
   }
 );
 
-const PORT = process.env.PORT || 3000;
+const PATH = process.env.PORT || 3000;
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PATH, () => console.log(`Server running on port ${PATH}`));
