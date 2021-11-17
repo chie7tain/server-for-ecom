@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "node lib/index",
     "dev": "ts-node-dev --respawn server/index.ts",
-    "build": "tsc -p .",
+    "build": "tsc",
     "watch": "tsc -p . --watch"
   },
   "dependencies": {
