@@ -66,12 +66,12 @@ async function createProduct(
 ) {
   try {
     const body = await getPostData(req);
-    const { title, description, price } = JSON.parse(body);
-    console.log(title, description, price);
+    const { productName, productDescription,productVarieties } = JSON.parse(body);
+
     const newProduct = await Product.create({
-      title,
-      description,
-      price,
+      productName,
+      productDescription,
+      productVarieties,
     });
     res.statusCode = 201;
     res.setHeader("Content-Type", "application/json");
@@ -102,12 +102,13 @@ async function updateProduct(
       res.end();
     } else {
       const body = await getPostData(req);
-      const { title, description, price } = JSON.parse(body);
+      const { productName, productDescription, productVarieties } =
+        JSON.parse(body);
 
       const updatedProduct = await Product.update(id, {
-        title: title || product.title,
-        description: description || product.description,
-        price: price || product.price,
+        productName:productName || product.productName,
+        productDescription:productDescription || product.productDescription,
+        productVarieties:productVarieties ||product. productVarieties,
       });
       res.statusCode = 200;
       res.setHeader("Content-Type", "application/json");

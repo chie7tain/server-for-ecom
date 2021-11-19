@@ -1,4 +1,5 @@
 import http, { IncomingMessage, Server, ServerResponse } from "http";
+const bodyParser = require("body-parser");
 const {
   getProducts,
   getProduct,
@@ -14,6 +15,8 @@ const server: Server = http.createServer(
   (req: IncomingMessage, res: ServerResponse) => {
     // get products endpoint
     if (req.url === "/api/products" && req.method === "GET") {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Access-Control-Allow-Headers", "*");
       getProducts(req, res);
     }
     // get product endpoint

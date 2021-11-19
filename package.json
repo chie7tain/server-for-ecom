@@ -7,9 +7,11 @@
   "scripts": {
     "serve": "node lib/app",
     "dev": "ts-node server/index.ts",
-    "compile": "yarn tsc"
+    "compile": "tsc -p . --watch",
+    "re-dev": "ts-node-dev --respawn server/index.ts"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3",
     "uuid": "^8.3.2"
